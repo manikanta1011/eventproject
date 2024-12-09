@@ -32,7 +32,12 @@ function EventProject() {
         event.id === id && event.remainingSpots > 0 ? { ...event, remainingSpots: event.remainingSpots - 1 } : event
       )
     );
-
+ 
+    const event = events.find((e) => e.id === id);
+    if (event && !registeredEvents.includes(event)) {
+      setRegisteredEvents([...registeredEvents, event]);
+    }
+  };
     
   
   return (
@@ -80,8 +85,19 @@ function EventProject() {
 </button>
 </div>
       ))}
+      <h2 className="subheader">Your Registered Events</h2>
+      {registeredEvents.length > 0 ? (
+<ul className="registered-list">
+          {registeredEvents.map((event) => (
+<li key={event.id} className="registered-item">
+              {event.name} - {event.date}
+</li>
+          ))}
+</ul>
+      ) : (
+<p>No registered events.</p>
+      )}
 
-        
     </div>
   )
 }
