@@ -21,6 +21,10 @@ function EventProject() {
           remainingSpots: 3,
         },
       ]);
+
+      const [registeredEvents, setRegisteredEvents] = useState([]);
+  const [filters, setFilters] = useState({ category: "", location: "", date: "" });
+  
   return (
     <div>
       <h1>Event Management System</h1>
@@ -35,7 +39,18 @@ function EventProject() {
         </select>
         </div>
 
-
+        <input
+          type="text"
+          className="filter-input"
+          placeholder="Filter by location, category"
+          onChange={(e) => setFilters({ ...filters, location: e.target.value })}
+        />
+ 
+        <input
+          type="date"
+          className="filter-input"
+          onChange={(e) => setFilters({ ...filters, date: e.target.value })}
+        />
 
 
         
