@@ -24,6 +24,16 @@ function EventProject() {
 
       const [registeredEvents, setRegisteredEvents] = useState([]);
   const [filters, setFilters] = useState({ category: "", location: "", date: "" });
+
+
+  const handleRegister = (id) => {
+    setEvents((prev) =>
+      prev.map((event) =>
+        event.id === id && event.remainingSpots > 0 ? { ...event, remainingSpots: event.remainingSpots - 1 } : event
+      )
+    );
+
+    
   
   return (
     <div>
@@ -52,6 +62,24 @@ function EventProject() {
           onChange={(e) => setFilters({ ...filters, date: e.target.value })}
         />
 
+<h2 className="subheader">Events</h2>
+      {filteredEvents.map((event) => (
+<div key={event.id} className="event-card">
+<h3>{event.name}</h3>
+<p>Date: {event.date}</p>
+<p>Location: {event.location}</p>
+<p>Category: {event.category}</p>
+<p>Spots Left: {event.remainingSpots}</p>
+<p>Description: {event.description}</p>
+<button
+            className="register-button"
+            onClick={() => handleRegister(event.id)}
+            disabled={event.remainingSpots === 0}
+>
+            {event.remainingSpots > 0 ? "Register" : "Fully Booked"}
+</button>
+</div>
+      ))}
 
         
     </div>
