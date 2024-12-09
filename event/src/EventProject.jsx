@@ -39,10 +39,18 @@ function EventProject() {
     }
   };
     
+  const filteredEvents = events.filter(
+    (event) =>
+      (!filters.category || event.category === filters.category) &&
+      (!filters.location || event.location.toLowerCase().includes(filters.location.toLowerCase())) &&
+      (!filters.date || event.date === filters.date)
+  );
+
+
   
   return (
-    <div>
-      <h1>Event Management System</h1>
+    <div className="container">
+      <h1 className="header">Event Management System</h1>
 
       <div className="filter-container">
         <select
@@ -79,8 +87,7 @@ function EventProject() {
 <button
             className="register-button"
             onClick={() => handleRegister(event.id)}
-            disabled={event.remainingSpots === 0}
->
+            disabled={event.remainingSpots === 0}>
             {event.remainingSpots > 0 ? "Register" : "Fully Booked"}
 </button>
 </div>
