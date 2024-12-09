@@ -1,0 +1,83 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333; 
+  }
+ 
+  /* Header */
+  .header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+  }
+ 
+  .subheader {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+ 
+  /* Filter inputs */
+  .filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+ 
+  .filter-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+  }
+ 
+  
+  .event-card {
+    border: 2px solid #252b2a; 
+    border-radius: 10px;
+    padding: 15px;
+    width: 70%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    background-color: #9cdcf0; 
+  }
+ 
+ 
+  .register-button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d285f0;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+ 
+  .register-button:disabled {
+    background-color: #e0e0e0; 
+    color: #e99c9c;
+    cursor: not-allowed;
+  }
+ 
+  .register-button:hover:not(:disabled) {
+    background-color: #6e6d6c; 
+  }
+ 
+
+  .registered-list {
+    list-style: none;
+    padding: 0;
+  }
+ 
+  .registered-item {
+    padding: 20px;
+    margin: auto ;
+    width:50%;
+    border: 2px solid #aaa; 
+    border-radius: 5px;
+    background-color: #e773d4; 
+    text-align: center;
+  }
