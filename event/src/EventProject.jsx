@@ -78,7 +78,7 @@ function EventProject() {
         
    </div>
 
-<h2 className="subheader">Events</h2>
+<h2 className="subheader"> Up Coming Events</h2>
       {filteredEvents.map((event) => (
 <div key={event.id} className="event-card">
 <h3>{event.name}</h3>
