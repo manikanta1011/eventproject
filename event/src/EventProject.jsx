@@ -100,7 +100,7 @@ function EventProject() {
 <ul className="registered-list">
           {registeredEvents.map((event) => (
 <li key={event.id} className="registered-item">
-              {event.name} - {event.date}
+              {event.name} - {event.date} - {event.location}
 </li>
           ))}
 </ul>
