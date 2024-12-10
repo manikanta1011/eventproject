@@ -61,7 +61,7 @@ function EventProject() {
         <option value="Workshop">Workshop</option>
         <option value="Conference">Conference</option>
         </select>
-        </div>
+        
 
         <input
           type="text"
@@ -75,6 +75,8 @@ function EventProject() {
           className="filter-input"
           onChange={(e) => setFilters({ ...filters, date: e.target.value })}
         />
+        
+   </div>
 
 <h2 className="subheader">Events</h2>
       {filteredEvents.map((event) => (

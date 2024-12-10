@@ -39,6 +39,8 @@
     border-radius: 10px;
     padding: 15px;
     width: 70%;
+    margin-left: auto; 
+    margin-right: auto;
     margin-left: 30px;
     margin-bottom: 15px;
     background-image: linear-gradient(to right, #b6fbff, #83a4d4);
@@ -81,3 +83,55 @@
     background-color: #e773d4; 
     text-align: center;
   }
+
+
+
+
+@media(max-width:600px) {     
+.header{
+font-size:1.5rem;
+}  
+.filter-container{
+flex-direction:column;
+gap:5px;
+}    
+.event-card {
+ width:90%;
+}    
+.registered-item { 
+     width: 90%;     
+ }   
+.register-button {        
+    padding: 8px 15px;        
+    font-size: 0.9rem;    
+    } 
+}
+               
+@media (max-width: 900px) {     
+.header {        
+font-size: 1.8rem;   
+ }    
+                    
+ .filter-container {        
+    flex-direction:column;       
+    gap: 8px;    
+                    
+}   
+                    
+.event-card {      
+    width:80%;
+                        
+} 
+.registered-item {
+    width: 80%;
+    } } 
+@media (max-width: 1200px) { 
+    .header { 
+    font-size: 2rem; 
+    }
+.event-card { 
+width: 70%; 
+}
+.registered-item {
+width: 70%; 
+} }
