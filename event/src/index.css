@@ -4,7 +4,7 @@
     color: #333; 
   }
  
-  /* Header */
+ 
   .header {
     font-size: 2rem;
     text-align: center;
@@ -19,7 +19,7 @@
     color: #555;
   }
  
-  /* Filter inputs */
+
   .filter-container {
     display: flex;
     gap: 10px;
@@ -41,7 +41,7 @@
     width: 70%;
     margin-left: 30px;
     margin-bottom: 15px;
-    background-color: #9cdcf0; 
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
   }
  
  
